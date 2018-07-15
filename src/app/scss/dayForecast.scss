@@ -1,0 +1,65 @@
+@import "basic";
+@import "colors";
+.daily-forecast-holder {
+    margin: 0 auto;
+    width: 90%;
+    padding: 5%;
+    background-color: rgba($color:$card-background, $alpha: 0.3);
+    color: $title-color;
+    font-size: 2rem;
+    h1,
+    .daily-time {
+        margin-bottom: 10%;
+    }
+    #daily-temp {
+        font-size: 10rem;
+    }
+    img {
+        width: auto;
+        opacity: 1;
+        @media(min-width: 768px) {
+            width: 10%;
+            vertical-align: middle;
+        }
+    }
+    li {
+        list-style: none;
+        padding: 2%;
+        img {
+            width: 20%;
+            margin: 5%;
+        }
+    }
+    .daily-content {
+        font-size: 1.5rem;
+        display: inline-block;
+        padding-right: 10%;
+        width: 50%;
+        text-align: justify;
+        float: left;
+    }
+    .daily-content-sun-stages {
+        @extend .daily-content;
+        padding-left: 10%;
+        padding-right: 0;
+        float: right;
+    }
+    .daily-pointer-to-hours {
+        clear: both;
+        padding-top: 7%;
+        font-size: 1.2rem;
+        text-align: center;
+        cursor: pointer;
+    }
+    @media(min-width: 992px) {
+        width: 60%;
+        .daily-time,
+        #daily-temp,
+        h1 {
+            margin-bottom: 5%;
+        }
+    }
+    .daily-header {
+        text-align: center;
+    }
+}

@@ -1,0 +1,44 @@
+@import "basic";
+@import "colors";
+.input-search {
+    display: block;
+    margin: 0 auto;
+    background: none;
+    border: none;
+    border-bottom: 1px solid $input-line;
+    width: 90%;
+    padding: 5% 5% 5% 10%;
+    ;
+    font-size: 1.5rem;
+    color: $title-color;
+    background-image: url(http://www.metacritic.com/images/icons/search_active.png);
+    background-repeat: no-repeat;
+    background-position: 3% 55%;
+}
+
+.input-search-holder {
+    padding: 5%;
+    background-color: rgba($color: $card-background, $alpha: 0.4)
+}
+
+.default-page-title {
+    color: $title-color;
+    padding: 5%;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.default-page-message {
+    @extend .default-page-title;
+    font-size: 1rem;
+    @media(min-width: 768px) {
+        font-size: 1.5rem;
+    }
+    span {
+        cursor: pointer;
+        transition: color 1s;
+    }
+    span:hover {
+        color: $text-transition;
+    }
+}

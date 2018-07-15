@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow: auto; }
+
+.container {
+  margin: 0 auto;
+  width: 70%; }
+
+.input-search {
+  display: block;
+  margin: 0 auto;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #c1f8ff;
+  width: 90%;
+  padding: 5% 5% 5% 10%;
+  font-size: 1.5rem;
+  color: #a4bec4;
+  background-image: url(http://www.metacritic.com/images/icons/search_active.png);
+  background-repeat: no-repeat;
+  background-position: 3% 55%; }
+
+.input-search-holder {
+  padding: 5%;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.default-page-title, .default-page-message {
+  color: #a4bec4;
+  padding: 5%;
+  font-size: 2rem;
+  text-align: center; }
+
+.default-page-message {
+  font-size: 1rem; }
+  @media (min-width: 768px) {
+    .default-page-message {
+      font-size: 1.5rem; } }
+  .default-page-message span {
+    cursor: pointer;
+    transition: color 1s; }
+  .default-page-message span:hover {
+    color: #7c7c33; }
+
+/*# sourceMappingURL=search.css.map */

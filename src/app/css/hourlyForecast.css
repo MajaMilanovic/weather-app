@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow: auto; }
+
+.container {
+  margin: 0 auto;
+  width: 70%; }
+
+img {
+  width: 100%;
+  opacity: 0.4; }
+
+a, a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none; }
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #e9ffff; }
+
+.background {
+  background-image: url("https://amazingsky.files.wordpress.com/2011/07/moon-pleiades-with-mars-jupiter-july-25-2011.jpg");
+  width: 100%;
+  padding-bottom: 67px;
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.day-list {
+  padding-bottom: 50px; }
+
+.city-card {
+  padding: 1rem 0;
+  color: #a4bec4;
+  font-family: sans-serif;
+  width: 100%; }
+  .city-card p {
+    margin: 1rem 0; }
+  .city-card h1 {
+    font-size: 4rem; }
+
+.day-card {
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  margin: 10px;
+  margin-left: 0;
+  color: #a4bec4;
+  font-size: 2rem;
+  transition: background-color 1s; }
+  .day-card p:not(.day-card-pointer) {
+    font-size: 15px;
+    padding: 5px 0; }
+    .day-card p:not(.day-card-pointer) span {
+      font-size: 26px; }
+  .day-card img {
+    width: 35%;
+    opacity: 1; }
+  @media (min-width: 768px) {
+    .day-card {
+      width: 48%;
+      display: inline-block; } }
+  @media (min-width: 992px) {
+    .day-card {
+      width: 31%; }
+      .day-card img {
+        width: 50%; } }
+  @media (min-width: 1200px) {
+    .day-card {
+      width: 18%; }
+      .day-card img {
+        width: 75%; } }
+
+.day-card:hover {
+  background-color: rgba(0, 0, 0, 0.6); }
+
+.day-card-content li {
+  list-style: none;
+  font-size: 16px;
+  margin: 5px 0; }
+
+.day-card-pointer {
+  font-size: 12px;
+  padding: 10px 0; }
+
+.back-link-pointer {
+  cursor: pointer;
+  color: #a4bec4;
+  margin-bottom: 5%; }
+
+.loader-item {
+  font-size: 6rem;
+  margin: 20% auto;
+  text-align: center;
+  color: #a4bec4; }
+
+.goUpPage {
+  position: fixed;
+  overflow: hidden;
+  bottom: 5%;
+  right: 20%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  background-image: url("https://i2.wp.com/theclassadvantage.com/wp-content/uploads/2018/01/cropped-cropped-110946-glowing-green-neon-icon-arrows-arrow-thick-up-2.png");
+  background-size: cover;
+  box-shadow: 0px 18px 28px -11px #707070;
+  transition: width 1s, height 1s, opacity 2s;
+  opacity: 0.2; }
+  .goUpPage a {
+    padding: 50%; }
+
+.goUpPage:hover {
+  width: 120px;
+  height: 120px;
+  opacity: 1; }
+
+/*# sourceMappingURL=hourlyForecast.css.map */

@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow: auto; }
+
+.container {
+  margin: 0 auto;
+  width: 70%; }
+
+.default-page {
+  background-image: url("https://amazingsky.files.wordpress.com/2011/07/moon-pleiades-with-mars-jupiter-july-25-2011.jpg");
+  background-position: center;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 25% 0; }
+  @media (min-width: 768px) {
+    .default-page {
+      padding: 5% 0; } }
+  @media (min-width: 992px) {
+    .default-page {
+      padding: 2% 0; } }
+
+/*# sourceMappingURL=defaultPage.css.map */

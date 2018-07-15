@@ -1,0 +1,17 @@
+@import "basic";
+@import "colors";
+.default-page {
+    background-image: url("https://amazingsky.files.wordpress.com/2011/07/moon-pleiades-with-mars-jupiter-july-25-2011.jpg");
+    background-position: center;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 25% 0;
+    @media(min-width: 768px) {
+        padding: 5% 0;
+    }
+    @media(min-width: 992px) {
+        padding: 2% 0;
+    }
+}

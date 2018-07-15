@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow: auto; }
+
+.container {
+  margin: 0 auto;
+  width: 70%; }
+
+.daily-forecast-holder {
+  margin: 0 auto;
+  width: 90%;
+  padding: 5%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #a4bec4;
+  font-size: 2rem; }
+  .daily-forecast-holder h1,
+  .daily-forecast-holder .daily-time {
+    margin-bottom: 10%; }
+  .daily-forecast-holder #daily-temp {
+    font-size: 10rem; }
+  .daily-forecast-holder img {
+    width: auto;
+    opacity: 1; }
+    @media (min-width: 768px) {
+      .daily-forecast-holder img {
+        width: 10%;
+        vertical-align: middle; } }
+  .daily-forecast-holder li {
+    list-style: none;
+    padding: 2%; }
+    .daily-forecast-holder li img {
+      width: 20%;
+      margin: 5%; }
+  .daily-forecast-holder .daily-content, .daily-forecast-holder .daily-content-sun-stages {
+    font-size: 1.5rem;
+    display: inline-block;
+    padding-right: 10%;
+    width: 50%;
+    text-align: justify;
+    float: left; }
+  .daily-forecast-holder .daily-content-sun-stages {
+    padding-left: 10%;
+    padding-right: 0;
+    float: right; }
+  .daily-forecast-holder .daily-pointer-to-hours {
+    clear: both;
+    padding-top: 7%;
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: pointer; }
+  @media (min-width: 992px) {
+    .daily-forecast-holder {
+      width: 60%; }
+      .daily-forecast-holder .daily-time,
+      .daily-forecast-holder #daily-temp,
+      .daily-forecast-holder h1 {
+        margin-bottom: 5%; } }
+  .daily-forecast-holder .daily-header {
+    text-align: center; }
+
+/*# sourceMappingURL=dayForecast.css.map */
