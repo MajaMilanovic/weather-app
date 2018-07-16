@@ -17,5 +17,7 @@ current weather and forecasts in your city will be instantly available.
 
 Made with Create React App and Sass.
 
+Deployed with Surge here: www.thundering-brothers.surge.sh
+
 Have a sunny day!
 

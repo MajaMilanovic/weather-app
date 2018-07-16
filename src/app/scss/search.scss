@@ -42,3 +42,10 @@
         color: $text-transition;
     }
 }
+
+.search-page-error-message {
+    color: $error-color;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+}

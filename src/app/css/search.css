@@ -44,4 +44,10 @@
   .default-page-message span:hover {
     color: #7c7c33; }
 
+.search-page-error-message {
+  color: #a22121;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.5rem; }
+
 /*# sourceMappingURL=search.css.map */

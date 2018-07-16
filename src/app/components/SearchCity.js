@@ -10,13 +10,15 @@ class SearchCity extends Component {
         this.state = {
             searchValue: "",
             city: null,
+            error: false,
             currentCity: (sessionStorage.getItem("currentWeather")) ? true : false
         }
     }
     getSearchValue = (e) => {
         let searchValue = e.target.value;
         this.setState({
-            searchValue
+            searchValue,
+            error: false
         });
     };
 
@@ -33,7 +35,8 @@ class SearchCity extends Component {
                 .catch(error => {
                     this.setState({
                         city: null,
-                        searchValue: ""
+                        searchValue: "",
+                        error: true
                     })
                     console.log(error.message);
 
@@ -56,7 +59,7 @@ class SearchCity extends Component {
         const city = JSON.parse(sessionStorage.getItem("currentWeather"));
 
         this.setState((previousState, currentProps) => {
-            return { ...previousState, city }
+            return { ...previousState, city, error: false }
         })
     }
 
@@ -100,11 +103,12 @@ class SearchCity extends Component {
 
 
     render() {
-        const { city } = this.state;
+        const { error } = this.state;
 
         return (
             <Fragment>
                 {this.displayLocationForecast()}
+                {(error) ? <p className="search-page-error-message">Something went wrong. Please try another search.</p> : ""}
             </Fragment>
         );
     };
