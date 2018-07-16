@@ -3,6 +3,7 @@ import "../css/dayForecast.css";
 import "../css/hourlyForecast.css";
 import { HourlyForecast } from "./HourlyForecast";
 import { url } from "../utils/endpoints";
+import { getMonthName, ordinalNumbers } from "../utils/helpers";
 
 class DayForecast extends Component {
     constructor(props) {
@@ -32,6 +33,10 @@ class DayForecast extends Component {
     render() {
         const { city } = this.props;
         const { hourlyView } = this.state;
+
+        const month = getMonthName(city.month);
+        const dayNum = ordinalNumbers(city.dayDate);
+
         return (
             <Fragment>
                 {
@@ -39,7 +44,7 @@ class DayForecast extends Component {
                         ? <div className="daily-forecast-holder">
                             <div className="daily-header">
                                 <h1>{`${city.cityName}, ${city.country}`}<img src={`${url.icon}${city.icon}.png`} alt="icon" /></h1>
-                                <p className="daily-title">{city.dayDate}</p>
+                                <p className="daily-title">{`${month}, ${dayNum}`}</p>
                                 <p className="daily-time">{`🕐 time: ${city.dayTime}`}</p>
                                 <h1 id="daily-temp">{`${parseInt(city.temp)}°`}</h1>
                             </div>

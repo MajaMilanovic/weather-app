@@ -76,7 +76,7 @@ a:active {
         width: 50%; } }
   @media (min-width: 1200px) {
     .day-card {
-      width: 18%; }
+      width: 23%; }
       .day-card img {
         width: 75%; } }
 
@@ -119,11 +119,15 @@ a:active {
   transition: width 1s, height 1s, opacity 2s;
   opacity: 0.2; }
   .goUpPage a {
-    padding: 50%; }
+    padding: 0% 47% 84%; }
 
 .goUpPage:hover {
   width: 120px;
   height: 120px;
   opacity: 1; }
+
+.hourly-forecast-day-title {
+  color: #a4bec4;
+  margin: 10px 0; }
 
 /*# sourceMappingURL=hourlyForecast.css.map */

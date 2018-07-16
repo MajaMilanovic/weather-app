@@ -77,7 +77,7 @@ a:active {
         }
     }
     @media (min-width:1200px) {
-        width: 18%;
+        width: 23%;
         img {
             width: 75%;
         }
@@ -130,7 +130,7 @@ a:active {
     transition: width 1s, height 1s, opacity 2s;
     opacity: 0.2;
     a {
-        padding: 50%;
+        padding: 0% 47% 84%;
     }
 }
 
@@ -138,4 +138,9 @@ a:active {
     width: 120px;
     height: 120px;
     opacity: 1;
+}
+
+.hourly-forecast-day-title {
+    color: $title-color;
+    margin: 10px 0;
 }

@@ -5,34 +5,11 @@ const filterForecastArrayByDays = (arr) => {
 
     let result = {};
 
+
     for (let i = 1; i < arr.length; i++) {
         if (arr[i - 1].day !== arr[i].day) {
             let weekDayNumber = arr[i - 1].day;
-            let weekDay = "";
-
-            switch (weekDayNumber) {
-                case 1:
-                    weekDay = "Monday";
-                    break;
-                case 2:
-                    weekDay = "Tuesday";
-                    break;
-                case 3:
-                    weekDay = "Wednesday";
-                    break;
-                case 4:
-                    weekDay = "Thursday";
-                    break;
-                case 5:
-                    weekDay = "Friday";
-                    break;
-                case 6:
-                    weekDay = "Saturday";
-                    break;
-                case 7:
-                    weekDay = "Sunday";
-                    break;
-            }
+            let weekDay = getDayName(weekDayNumber);
 
             end = i;
             result[weekDay] = arr.slice(begin, end);
@@ -44,6 +21,51 @@ const filterForecastArrayByDays = (arr) => {
 }
 
 
+
+const getDayName = (num) => {
+    const dayNames = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    return dayNames[num - 1];
+}
+
+
+const ordinalNumbers = (num) => {
+
+    var result = "";
+    var remains = num % 100;
+
+    if (remains > 10 && remains < 14) {
+        result = num + "th";
+    } else if (remains > 14) {
+        var lastDigit = remains % 10;
+
+        switch (lastDigit) {
+            case 1:
+                result = num + "st";
+                break;
+            case 2:
+                result = num + "nd";
+                break;
+            case 3:
+                result = num + "rd";
+                break;
+            default:
+                result = num + "th";
+                break;
+        }
+    }
+    return result;
+}
+
+const getMonthName = (monthNumber) => {
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
+    return monthNames[monthNumber - 1];
+}
+
+
 export {
-    filterForecastArrayByDays
+    filterForecastArrayByDays,
+    ordinalNumbers,
+    getMonthName
 };

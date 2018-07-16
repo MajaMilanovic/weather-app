@@ -17,9 +17,9 @@ const DayList = (props) => {
 
     return (
         <ul className="day-list">
-            {getForecastList(weatherData).map((element, index) => {
-                return <li>
-                    <DayCard day={element} key={index} />
+            {getForecastList(weatherData).map(element => {
+                return <li key={Math.random() * 10000}>
+                    <DayCard day={element} />
                 </li>
             })}
         </ul>

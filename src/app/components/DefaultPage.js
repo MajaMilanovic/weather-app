@@ -3,21 +3,11 @@ import "../css/defaultPage.css";
 import SearchCity from "./SearchCity";
 import { cityDayForecast } from "../service/cityDayForecast";
 import { WeatherDetails } from "../entities/WeatherDetails";
-// import { withRouter } from "react-router-dom";
 
 class DefaultPage extends Component {
-    constructor() {
-        super();
-        // this.state = {
-        //     currentWeather: false
-        // }
-    }
 
     componentDidMount = () => {
         navigator.geolocation.getCurrentPosition(position => {
-            // this.setState((prevState, currentProps) => {
-            //     return { ...prevState, currentWeather: true }
-            // })
             cityDayForecast.getForecastByCityCoords(position.coords.latitude, position.coords.longitude)
                 .then(weather => {
                     const currentWeather = new WeatherDetails(weather);
@@ -26,9 +16,6 @@ class DefaultPage extends Component {
 
         }, error => {
             console.log("Location not allowed.");
-            // this.setState((prevState, currentProps) => {
-            //     return { ...prevState, currentWeather: false }
-            // })
         })
     }
 
@@ -42,5 +29,4 @@ class DefaultPage extends Component {
     }
 };
 
-// export default withRouter(DefaultPage);
 export default DefaultPage;

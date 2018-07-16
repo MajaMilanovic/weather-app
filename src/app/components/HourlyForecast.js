@@ -48,7 +48,7 @@ class HourlyForecast extends Component {
                         <CityData city={city} />
                         <p onClick={this.goBack} className="back-link-pointer">{`<< Back to Daily forecast`}</p>
                         <DayList weather={weather} />
-                        <div className="goUpPage"><a href="#page-title">{`^`}</a></div>
+                        <div className="goUpPage" ><a href="#page-title"></a></div>
                     </div>
                 </div>
         )

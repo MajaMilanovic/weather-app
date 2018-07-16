@@ -3,7 +3,6 @@ import "../css/search.css";
 import { cityDayForecast } from "../service/cityDayForecast";
 import { WeatherDetails } from "../entities/WeatherDetails";
 import { DayForecast } from "./DayForecast";
-// import { withRouter } from "react-router-dom";
 
 class SearchCity extends Component {
     constructor(props) {
@@ -106,24 +105,9 @@ class SearchCity extends Component {
         return (
             <Fragment>
                 {this.displayLocationForecast()}
-                {/* {(!city)
-                    ? <div className="input-search-holder">
-
-                        <p className="default-page-title">Weather Forecast</p>
-
-                        <input type="search" className="input-search"
-                            name="searchValue" value={this.state.searchValue}
-                            onChange={this.getSearchValue}
-                            onKeyDown={this.startSearch} />
-
-                        <p className="default-page-message">Search place to see weather forecast.</p>
-                    </div>
-                    : <DayForecast city={city} goBack={this.goBack} />} */}
-
             </Fragment>
         );
     };
 };
 
-// export default withRouter(SearchCity);
 export default SearchCity;
